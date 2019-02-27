@@ -1,0 +1,16 @@
+<nav *ngIf="navshow">
+        <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link active" href="products">Products</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="users">Users</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="admin">My Account</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" (click)="onLogOut()"><i class="fa fa-sign-out" title="Press to logout" style="cursor:pointer" aria-hidden="true"></i></a>
+                </li>
+        </ul>
+</nav>
