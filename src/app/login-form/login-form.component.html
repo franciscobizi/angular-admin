@@ -1,0 +1,29 @@
+<div class="row" style="margin-top:10%">
+    <div class="col-md-12">
+    <div class="card border-light mb-3" style="max-width: 18rem; margin: auto;">
+          <div class="card-header"><h4>Login to your account</h4></div>
+          <div class="card-body">
+              <div class="text-center">
+                  <mat-form-field>
+                    <input matInput placeholder="Enter your username" #username>
+                  </mat-form-field>
+                  <mat-form-field>
+                      <input matInput placeholder="Enter your password" type="password" #password>
+                  </mat-form-field> 
+                </div>
+                <div class="row">
+                  <div class="col-md-12" style="padding-left: 17%;">
+                      <button mat-flat-button color="primary" (click)="onLoginSubmit(username.value, password.value)">Login</button>
+                  </div>
+                </div>
+                <br>
+                <div class="row" *ngIf="message">
+                    <div class="col-md-12" style="padding-left: 17%;">
+                      <div class="alert alert-danger">{{message}}</div>
+                    </div>
+                </div>
+          </div>
+        </div>
+      </div>
+</div>
+    
