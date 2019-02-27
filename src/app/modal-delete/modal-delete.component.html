@@ -1,0 +1,12 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Delete product</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+        <h5>Are you sure that want to delete the product?</h5>
+        <input class="form-control" [(ngModel)]="user" type="hidden">
+        <br>
+        <button (click)="daleteBack()" type="button" class="btn btn-primary w-100">Delete</button>
+  </div>
