@@ -30,7 +30,7 @@
                 </thead>
                 <!-- Display products -->
                 <tbody *ngIf="products">
-                    <tr  *ngFor="let product of products.slice().reverse()">
+                    <tr  *ngFor="let product of products; let i = index">
                         <th scope="row">{{product.id}}</th>
                         <td>{{product.name}}</td>
                         <td>{{product.price}} </td>
@@ -46,38 +46,6 @@
                         <td colspan="6">
                             Products per page
                             <select (change)="onPageNumber($event)">
-                                <option value="5">5</option>
-                                <option value="10">10</option>
-                                <option value="20">20</option>
-                            </select>
-                            |
-                            <i class="fa fa-backward" aria-hidden="true"></i>
-                            1 of 10 
-                            <i class="fa fa-forward" aria-hidden="true"></i>
-                        </td>
-                        <td class="text-center">
-                            Search by ID <input type="text" style="width:30px; padding: 3px 5px;" placeholder="1" #prductId>&nbsp; <a (click)="onProductById(prductId.value);" class="badge badge-primary" style="padding: 9px;">Go</a>
-                        </td>
-                    </tr>
-                </tbody>
-                <!-- Products by id -->
-                <tbody *ngIf="productsById">
-                    <tr  *ngFor="let product of productsById">
-                        <th scope="row">{{product.id}}</th>
-                        <td>{{product.name}}</td>
-                        <td>{{product.price}} </td>
-                        <td>{{product.amount}} </td>
-                        <td>{{product.userid}}</td>
-                        <td>{{product.created_at.split('T')[0]}}</td>
-                        <td class="text-center">
-                            <app-modal-container [upid]="product.id" [upname]="product.name" [upprice]="product.price" [upamount]="product.amount"  [delete]="product.id">
-                            </app-modal-container>
-                        </td>
-                    </tr>
-                    <tr style="background-color: #e9ecef; font-weight: bold">
-                        <td colspan="6">
-                            Products per page
-                            <select>
                                 <option value="5">5</option>
                                 <option value="10">10</option>
                                 <option value="20">20</option>

@@ -13,7 +13,7 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {
     this.userService.getUserProfile().subscribe(
-      res => {this.user.username = this.ucfirst(res['user']['user']['username'])},
+      res => {this.user.username = this.ucfirst(res['username'])},
       err => {
         {console.log(err);}
       }

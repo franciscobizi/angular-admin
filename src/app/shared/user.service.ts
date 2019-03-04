@@ -56,9 +56,9 @@ export class UserService {
      * @return json | user data 
      */
     getUserPayload(){
-      var token = this.getUserToken();
+      let token = this.getUserToken();
       if(token){
-        var userdata = atob(token.split('.')[1]);
+        let userdata = atob(token.split('.')[1]);
         return JSON.parse(userdata);
       }else{
         return null;
@@ -82,7 +82,7 @@ export class UserService {
 
     //check if user is loggedin
     isLoggedIn(){
-      var user_data = this.getUserPayload();
+      let user_data = this.getUserPayload();
       if(user_data){
         return user_data.exp > Date.now() / 1000;
       }else{

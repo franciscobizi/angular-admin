@@ -15,8 +15,12 @@ export class ProductsListComponent implements OnInit {
 
   ngOnInit() {
     this.productService.getProducts().subscribe(
-        res => {this.products = res['results']},
-        err => {console.log(err)}
+      res => {
+          this.products = res['product'];
+      },
+      err => {
+        console.log(err)
+      }
     );
   }
   /**
@@ -25,7 +29,7 @@ export class ProductsListComponent implements OnInit {
    * @param price 
    * @param amount 
    */
-  onAddProduct(name:string, price:string, amount:string){
+  onAddProduct(name : string, price : string, amount : string){
     var data = {name : name, price : price, amount : amount};
     this.productService.createProduct(data).subscribe(
        res => {this.message = res['message']},
@@ -40,8 +44,7 @@ export class ProductsListComponent implements OnInit {
   onProductById(id : string){
     this.productService.getProducts(id).subscribe(
       res => {
-        this.products = null;
-        this.productsById = res['results'];
+        this.products = res['product'];
       },
       err => {console.log(err)}
    );
@@ -55,8 +58,7 @@ export class ProductsListComponent implements OnInit {
     var limit = event.target.value;
     this.productService.getProductsByLimit(limit).subscribe(
         res => {
-          this.products = res['results'];
-          console.log(res['results']);
+          this.products = res['product'];
         },
         err => {console.log(err)}
     );

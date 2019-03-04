@@ -1,0 +1,30 @@
+{
+  "name": "angular-admin",
+  "version": "1.0.0",
+  "description": "Admin panel with angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon src/app.js -w server"
+  },
+  "keywords": [
+    "Panel",
+    "Admin"
+  ],
+  "author": "Francisco Bizi",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.16.1",
+    "bcrypt": "^3.0.4",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.0",
+    "mysql": "^2.16.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.14"
+  }
+}
