@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<div class="row" style="margin-top:10%;">
+<div class="row space">
     <div class="col-md-12">
         <div class="row text-center" *ngIf="message">
             <div class="col-md-12">
@@ -42,7 +42,7 @@
                             </app-modal-container>
                         </td>
                     </tr>
-                    <tr style="background-color: #e9ecef; font-weight: bold">
+                    <tr class="table-footer">
                         <td colspan="6">
                             Products per page
                             <select (change)="onPageNumber($event)">
@@ -56,7 +56,7 @@
                             <i class="fa fa-forward" aria-hidden="true"></i>
                         </td>
                         <td class="text-center">
-                            Search by ID <input type="text" style="width:30px; padding: 3px 5px;" placeholder="1" #prductId>&nbsp; <a (click)="onProductById(prductId.value);" class="badge badge-primary" style="padding: 9px;">Go</a>
+                            Search by ID <input type="text" class="input-search" placeholder="1" #prductId>&nbsp; <a (click)="onProductById(prductId.value);" class="badge badge-primary" style="padding: 9px;">Go</a>
                         </td>
                     </tr>
                 </tbody>

@@ -1,4 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body{
+    background: #3f51b5!important;
+}
 nav{text-transform: uppercase;}
 .badge{cursor: pointer;}
+.space{margin-top:10%}
+
+#input-login{
+    width: 100%;
+    background: none;
+    padding: 5px;
+    border: none;
+    color: #495057;
+    font-weight: 700;
+    border-bottom: 1px solid #222;
+    z-index: 2;
+    outline: none;
+    
+}
+
+#input-login:focus {
+    border-bottom: 2px solid #3f51b5;
+}
+#input-login:focus+label,
+#input-login:valid+label {
+    top: -50px;
+    color: #3f51b5;
+    font-size: 12px;
+}
+
+label{
+	display: block;
+	position: relative;
+	top: -30px;
+	left: 0;
+	font-family: 'Helvetica' sans-serif;
+	font-size: 16px;
+	z-index: 1;
+	transition: all 0.3s ease;
+}
+nav{margin-top: 10px;}
+.nav-link{color: #ffffff; font-weight: bold;}
+.nav-link:hover, .active{background: #ffffff; color: #007bff;}
+
+.table-footer{background-color: #e9ecef; font-weight: bold}
+.input-search{width:30px; padding: 3px 5px;}
+.btn{cursor: pointer;}
+.btn-success{margin-right: 8px;}
+table{background: #ffffff;}

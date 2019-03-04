@@ -5,12 +5,14 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { UsersComponent } from './users/users.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { AuthGuard } from './auth/auth.guard';
+import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
   {path:'',component : LoginFormComponent},
   {path:'admin', component : AdminComponent, canActivate : [AuthGuard]},
   {path:'products', component : ProductsListComponent, canActivate : [AuthGuard]},
-  {path:'users', component : UsersComponent, canActivate : [AuthGuard]}
+  {path:'users', component : UsersComponent, canActivate : [AuthGuard]},
+  { path: '**', component: PageNotFoundComponent } 
 ];
 
 @NgModule({
