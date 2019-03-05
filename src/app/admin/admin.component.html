@@ -1,6 +1,26 @@
 <app-navbar></app-navbar>
-<div class="row" style="margin-top:10%;">
+<div class="row space">
     <div class="col-md-12">
         <h3 class="text-center">Hi {{user.username}}, welcome again!</h3>
+        <div class="card border-light mb-3" style="max-width: 18rem; margin: auto;">
+            <div class="card-header"><h4>Edit your perfil</h4></div>
+            <div class="card-body">
+                <div class="form-group">
+                  <input type="text" id="input-login"  #username required>
+                  <label for="exampleInputEmail1">{{user.username}}</label>
+                </div>
+                <div class="form-group">
+                  <input type="password" id="input-login"  #password required>
+                  <label for="exampleInputPassword1">*******</label>
+                </div>
+                <button type="button" class="btn btn-primary btn-block" (click)="onLoginSubmit(username.value, password.value)">Save</button>
+                  <br>
+                  <div class="row" *ngIf="message">
+                      <div class="col-md-12 space-left">
+                        <div class="alert alert-danger">{{message}}</div>
+                      </div>
+                  </div>
+            </div>
+          </div>
     </div>
 </div>

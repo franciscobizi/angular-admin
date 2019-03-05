@@ -89,6 +89,7 @@ route.post('/products',checkToken, jwtVerify, (req, res)=>{
 
 // fetch products
 route.get('/products',checkToken, jwtVerify, async(req, res)=>{
+    //let countProduct = await getRepository.findAndCount(Products);
     let product = await getRepository(Products)
     .createQueryBuilder("products")
     .where("(products.userid = :productsUserid)")

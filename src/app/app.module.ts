@@ -33,6 +33,7 @@ import { ModalContentComponent } from './modal-content/modal-content.component';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalDeleteComponent } from './modal-delete/modal-delete.component';
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
     ModalContainerComponent, 
     ModalContentComponent, 
     ModalDeleteComponent, 
-    PageNotFoundComponent 
+    PageNotFoundComponent, 
+    FooterComponent 
   ],
   imports: [
     BrowserModule,
